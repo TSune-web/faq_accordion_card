@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [FAQ Accordion Card](https://your-live-site-url.com)
+- Live Site URL: [FAQ Accordion Card](https://tsune-web.github.io/faq_accordion_card/)
 
 
 ## My process
