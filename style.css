@@ -1,0 +1,164 @@
+/* ==================
+    Custom Properties
+================== */
+:root {
+    /* PRIMARY */
+    /* text colors */
+    --v-dark-blue: hsl(238, 29%, 16%);
+    --s-red: hsl(14, 88%, 65%);
+
+    /* gradient */
+    --s-violet: hsl(273, 75%, 66%);
+    --s-blue: hsl(240, 73%, 65%);
+
+    /* Neutral */
+    /* text colors */
+    --v-d-blue: hsl(237, 12%, 33%);
+    --d-blue: hsl(240, 6%, 50%, 0.5);
+
+    /* DIVIDERS */
+    --l-blue: hsl(240, 5%, 91%);
+
+    /* FONT */
+    --ff: 'Kumbh Sans', sans-serif;
+}
+
+/* ==================
+    Reset
+================== */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ==================
+    General
+================== */
+html {
+    font-size: 12px;
+    font-family: var(--ff);
+}
+
+body {
+    height: 70rem;
+    margin: -3.5rem 0 0 3rem;
+    background: linear-gradient(var(--s-violet), var(--s-blue)) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p { color: var(--d-blue); }
+
+/* ==================
+    Card general
+================== */
+section.card {
+    height: 500px;
+    width: 76rem;
+    background-color: white;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-position: -48rem -24.5rem;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==================
+    Left Part - images
+================== */
+.box {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, 110%);
+    z-index: 5;
+}
+
+.card__image {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card__image .illustration {
+    transform: translateX(-7rem);
+}
+
+.card__image .illustration-mobile {
+    display: none;
+}
+
+/* ==================
+    Right Part - accordion
+================== */
+.card__accordion {
+    width: 52.5%;
+    margin-left: auto;
+    padding: 5rem 8rem 2rem 2rem;
+}
+
+.card__accordion h1 {
+    margin-bottom: 2.5rem;
+    color: var(--v-dark-blue);
+    font-size: 2.5rem;
+}
+
+.faq__block {
+    border-bottom: 1px solid var(--l-blue);
+}
+
+.faq__block.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__block__q {
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.faq__block__q h2.q-title,
+.faq__block__q.active h2.q-title {
+    display: inline-block;
+    margin: 1.25rem 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--v-d-blue);
+}
+
+.faq__block__q.active h2.q-title {
+    font-weight: 700;
+    color: black;
+}
+
+.faq__block__q .arrow,
+.faq__block__q.active .arrow {
+    padding: 1.5rem 0.75rem 0 0;
+    float: right;
+}
+
+.faq__block__q.active .arrow {
+    display: inline-block;
+    margin-top: 1.5rem;
+    transform: rotateX(180deg);
+}
+
+
+.faq__block .faq__block__answer {
+    display: none;
+}
+
+.faq__block.active .faq__block__answer {
+    width: 93%;
+    margin-bottom: 1.5rem;
+    font-size: 12px;
+    line-height: 1.6;
+    display: block;
+    color: hsl(240, 6%, 50%, 0.9);
+}
