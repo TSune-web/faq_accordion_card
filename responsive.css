@@ -4,7 +4,8 @@
     }
 
     section.card {
-        margin: 3rem 2rem;
+        margin: 0 2rem;
+        transform: translateY(-9rem);
     }
     
     .card__accordion {
