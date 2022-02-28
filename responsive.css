@@ -28,13 +28,13 @@
 }
 
 @media (max-width: 47.5em) {
-    body {margin-top: 10rem;}
+    body {margin-top: 16%;}
     section.card {
         height: 45rem;
         margin: 0 5%;
         display: block;
         background-image: url(./images/bg-pattern-mobile.svg);
-        background-size: 57%;
+        background-size: 60%;
         background-position: 50% 0;
         background-repeat: no-repeat;
     }
@@ -43,12 +43,14 @@
     .card__image .illustration { display: none; }
 
     .card__image .illustration-mobile {
-        width: 50%;
-        height: 66.5%;
-        margin: -3% -5%;
-        display: block;
         position: absolute;
-        transform: translate(50%);
+        width: 60%;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 70%;
+        margin: 0 auto;
+        height: 66.5%;
     }
 
     .card__accordion {
@@ -76,16 +78,12 @@
 }
 
 @media (max-width: 23.5em) {
-    body {margin-top: 0;}
-
     section.card {
         height: 43rem;
-        background-size: 72%;
     }
 
     .card__image .illustration-mobile {
-        width: 65%;
-        margin: -5% -20%;
+        bottom: 70%;
     }
 
     .card__accordion {
